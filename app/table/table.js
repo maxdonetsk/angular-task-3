@@ -5,10 +5,10 @@
             .module('app')
             .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider) {
                     $stateProvider
-                            .state('tableview', {
+                            .state('table', {
                                 url: '/table',
                                 views: {
-                                    content: {templateUrl: 'app/tableview/tableview.html'}
+                                    content: {templateUrl: 'app/table/table.html'}
                                 }
                             });
                 }]);

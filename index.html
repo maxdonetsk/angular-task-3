@@ -9,7 +9,7 @@
     </head>
     <body ng-app="app">
         <nav class="navbar navbar-default">
-            <div class="container" ng-controller="HeaderController as header">
+            <div class="container" ng-controller="HeaderController as vm">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
                         <span class="icon-bar"></span>
@@ -20,11 +20,11 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li ng-class="{active: header.state.includes('tableview')}">
-                            <a ui-sref="tableview" href="#">Items table view</a>
+                        <li ng-class="{active: vm.state.includes('table')}">
+                            <a ui-sref="table" href="#">Items table view</a>
                         </li>
-                        <li ng-class="{active: header.state.includes('tileview')}">
-                            <a ui-sref="tileview" href="#">Items tile view</a>
+                        <li ng-class="{active: vm.state.includes('tile')}">
+                            <a ui-sref="tile" href="#">Items tile view</a>
                         </li>
                         <li><a href="#">Create/add item</a></li>
                     </ul>
@@ -44,13 +44,13 @@
 
         <!-- Modules -->
         <script src="app/app.js"></script>
-        <script src="app/tableview/tableview.js"></script>
-        <script src="app/tileview/tileview.js"></script>
+        <script src="app/table/table.js"></script>
+        <script src="app/tile/tile.js"></script>
 
         <!-- Controllers -->
         <script src="app/header/header.controller.js"></script>
-        <script src="app/tableview/tableview.controller.js"></script>
-        <script src="app/tileview/tileview.controller.js"></script>
+        <script src="app/table/table.controller.js"></script>
+        <script src="app/tile/tile.controller.js"></script>
 
         <!-- Directives -->
 
