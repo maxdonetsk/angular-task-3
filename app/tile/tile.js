@@ -3,7 +3,7 @@
 
     angular
             .module('app')
-            .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider) {
+            .config(['$stateProvider', function ($stateProvider) {
                     $stateProvider
                             .state('tile', {
                                 url: '/tile',
