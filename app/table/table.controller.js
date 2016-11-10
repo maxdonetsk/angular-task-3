@@ -5,9 +5,8 @@
             .module('app')
             .controller('TableController', TableController);
 
-    function TableController($state, Items) {
+    function TableController(Items) {
         var vm = this;
-        vm.state = $state;
         vm.items = [];
 
         Items.getAll()
