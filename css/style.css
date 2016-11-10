@@ -3112,7 +3112,33 @@ tbody.collapse.in {
 /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss";*/
 /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_badges.scss";*/
 /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_jumbotron.scss";*/
-/*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_thumbnails.scss";*/
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out; }
+  .thumbnail > img,
+  .thumbnail a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto; }
+  .thumbnail .caption {
+    padding: 9px;
+    color: #333333; }
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #337ab7; }
+
 /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss";*/
 /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_progress-bars.scss";*/
 /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_media.scss";*/
@@ -3213,24 +3239,14 @@ h6, .h6 {
   font-family: Arial, Helvetica, sans-serif;
   font-kerning: normal; }
 
-h1, .h1 {
-  font-size: 60px; }
-
-h2, .h2 {
-  font-size: 48px; }
-
-h3, .h3 {
-  font-size: 30px; }
-
-h4, .h4 {
-  font-size: 26px; }
-
-h5, .h5 {
-  font-size: 20px; }
-
-h6, .h6 {
-  font-size: 16px; }
-
+/*
+h1, .h1 {font-size: 60px;}
+h2, .h2 {font-size: 48px;}
+h3, .h3 {font-size: 30px;}
+h4, .h4 {font-size: 26px;}
+h5, .h5 {font-size: 20px;}
+h6, .h6 {font-size: 16px;}
+*/
 /*
 ONLY variables, no code here! 
 */
@@ -3370,6 +3386,20 @@ Example: @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
       height: -webkit-calc(100vh - 202px);
       height: calc(100vh - 202px);
       overflow-y: auto; } }
+  .ms-items-block .ms-item-col {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .ms-items-block .ms-item-col {
+        width: 50%;
+        float: left; } }
+    @media (min-width: 992px) {
+      .ms-items-block .ms-item-col {
+        width: 20%; } }
+    .ms-items-block .ms-item-col img {
+      width: 200px; }
 
 /***End of Items block***/
 

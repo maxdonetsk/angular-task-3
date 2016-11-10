@@ -3,9 +3,9 @@
 
     angular
             .module('app')
-            .controller('TileviewController', TileviewController);
+            .controller('TileController', TileController);
 
-    function TileviewController($state) {
+    function TileController($state) {
         var vm = this;
         vm.state = $state;
     }

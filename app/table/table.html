@@ -1,4 +1,4 @@
-<div ng-controller="TableviewController as item">
+<div ng-controller="TableController as item">
     <div class="row">
         <div class="col-md-5 text-xs-center text-md-left">
             <form id="ms-search-form">
@@ -16,7 +16,7 @@
                     <label class="control-label">Items per page:</label>
                     <select class="form-control" id="ms-show-items-select">
                         <option value="10">10</option>
-                        <option value="25">25</option>
+                        <option value="25">20</option>
                         <option value="50">50</option>
                         <option value="all">all</option>
                     </select>
@@ -24,7 +24,7 @@
             </form>
         </div>
         <div class="col-md-4 text-xs-center text-md-right">
-            <nav aria-label="...">
+            <nav>
                 <ul class="pagination ms-pagination">
                     <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
                     <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
@@ -261,7 +261,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12 text-xs-center text-md-right">
-            <nav aria-label="...">
+            <nav>
                 <ul class="pagination ms-pagination">
                     <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
                     <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>

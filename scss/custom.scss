@@ -89,5 +89,25 @@ Write custom rules here ONLY!
         @include calc(height, 100vh - #{$navbar-height + $navbar-margin-bottom + (($padding-base-vertical * 2) + ($padding-base-horizontal * 2) + ($form-group-margin-bottom * 2)) * 2});
         overflow-y: auto;
     }
+
+    .ms-item-col {
+        position: relative;
+        min-height: 1px;
+        padding-left:  ceil(($grid-gutter-width / 2));
+        padding-right: floor(($grid-gutter-width / 2));
+
+        @media (min-width: $screen-sm-min) {
+            width: 50%;
+            float: left;
+        }
+
+        @media (min-width: $screen-md-min) {
+            width: 20%;
+        }
+
+        img {
+            width: 200px;
+        }
+    }
 }
 /***End of Items block***/

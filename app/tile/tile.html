@@ -1,3 +1,80 @@
-<div ng-controller="TileviewController as item">
-    tileview
+<div ng-controller="TileController as item">
+    <div class="row">
+        <div class="col-md-5 text-xs-center text-md-left">
+            <form id="ms-search-form">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="search" id="ms-search-input" placeholder="Search by all Fields">
+                        <button type="submit" class="btn btn-primary" id="ms-search-submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3 text-xs-center text-md-right">
+            <form class="form-horizontal" id="ms-show-items-form">
+                <div class="form-group">
+                    <label class="control-label">Items per page:</label>
+                    <select class="form-control" id="ms-show-items-select">
+                        <option value="10">10</option>
+                        <option value="25">20</option>
+                        <option value="50">50</option>
+                        <option value="all">all</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4 text-xs-center text-md-right">
+            <nav>
+                <ul class="pagination ms-pagination">
+                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="row ms-items-block">
+        <div class="col-xs-12">
+            <div class="clearfix">
+                <div class="ms-item-col text-center">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="/img/noimage.jpg" alt="">
+                        </a>
+                        <div class="caption">
+                            <h3><a href="#">Title</a></h3>
+                            <p>
+                                <a href="#">Value 1</a>
+                            </p>
+                            <p>
+                                <a href="#">Value 2</a>
+                            </p>
+                            <p>
+                                <a href="#">Value 3</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-xs-center text-md-right">
+            <nav>
+                <ul class="pagination ms-pagination">
+                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </div>

@@ -3,9 +3,9 @@
 
     angular
             .module('app')
-            .controller('TableviewController', TableviewController);
+            .controller('TableController', TableController);
 
-    function TableviewController($state) {
+    function TableController($state) {
         var vm = this;
         vm.state = $state;
     }
