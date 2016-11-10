@@ -8,3 +8,86 @@ Write custom rules here ONLY!
 @import "mixins.scss";
 
 
+
+/***Search form***/
+#ms-search-form {
+    display: inline-block;
+
+    #ms-search-input {
+        border-top-left-radius: $input-height-base / 2;
+        border-bottom-left-radius: $input-height-base / 2;
+        width: auto;
+        height: auto;
+    }
+
+    #ms-search-submit {
+        border-top-right-radius: $input-height-base / 2;
+        border-bottom-right-radius: $input-height-base / 2;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+/***End of Search form***/
+
+
+
+/***Show items form***/
+#ms-show-items-select {
+    border-radius: $input-height-base / 2;
+    display: inline-block;
+    margin-left: 5px;
+    height: auto;
+    width: auto;
+}
+/***End of Show items form***/
+
+
+
+/***Pagination***/
+.ms-pagination {
+    margin: 0;
+
+    &.pagination {
+        > li {
+            &:first-child {
+                > a {
+                    border-top-left-radius: $input-height-base / 2;
+                    border-bottom-left-radius: $input-height-base / 2;
+                }
+            }
+
+            &:last-child {
+                > a {
+                    border-top-right-radius: $input-height-base / 2;
+                    border-bottom-right-radius: $input-height-base / 2;
+                }
+            }
+
+            > a {
+                padding: ($padding-base-vertical - 1) $padding-base-horizontal;
+            }
+        }
+    }
+}
+/***Pagination***/
+
+
+
+/***Items block***/
+.ms-items-block {
+    @include calc(height, 100vh - #{$navbar-height + $navbar-margin-bottom + (($padding-base-vertical * 2) + ($padding-base-horizontal * 2) + $form-group-margin-bottom) * 4});
+    min-height: 200px;
+    margin-top: $form-group-margin-bottom;
+    margin-bottom: $form-group-margin-bottom;
+    overflow-y: auto;
+
+    @media (min-width: $screen-md-min) {
+        @include calc(height, 100vh - #{$navbar-height + $navbar-margin-bottom + (($padding-base-vertical * 2) + ($padding-base-horizontal * 2) + ($form-group-margin-bottom * 2)) * 2});
+        overflow-y: auto;
+    }
+}
+/***End of Items block***/

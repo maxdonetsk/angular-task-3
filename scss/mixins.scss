@@ -37,7 +37,7 @@ Example: @include background-size-cover;
 
 /*
 Mixin for calc.
-Example: @include calc(width, "100% - 100px");
+Example: @include calc(height, 50% - #{10px});
 */
 @mixin calc($property, $expression) { 
     #{$property}: initial;

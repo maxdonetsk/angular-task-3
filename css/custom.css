@@ -24,11 +24,67 @@ Example: @include background-size-cover;
 */
 /*
 Mixin for calc.
-Example: @include calc(width, "100% - 100px");
+Example: @include calc(height, 50% - 10px);
 */
 /*
 Mixin for form-control-focus.
 Example: @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
 */
+/***Search form***/
+#ms-search-form {
+  display: inline-block; }
+  #ms-search-form #ms-search-input {
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+    width: auto;
+    height: auto; }
+  #ms-search-form #ms-search-submit {
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+    #ms-search-form #ms-search-submit:focus {
+      outline: 0; }
+
+/***End of Search form***/
+/***Show items form***/
+#ms-show-items-select {
+  border-radius: 17px;
+  display: inline-block;
+  margin-left: 5px;
+  height: auto;
+  width: auto; }
+
+/***End of Show items form***/
+/***Pagination***/
+.ms-pagination {
+  margin: 0; }
+  .ms-pagination.pagination > li:first-child > a {
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px; }
+  .ms-pagination.pagination > li:last-child > a {
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px; }
+  .ms-pagination.pagination > li > a {
+    padding: 5px 12px; }
+
+/***Pagination***/
+/***Items block***/
+.ms-items-block {
+  height: initial;
+  height: -webkit-calc(100vh - 274px);
+  height: calc(100vh - 274px);
+  min-height: 200px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  overflow-y: auto; }
+  @media (min-width: 992px) {
+    .ms-items-block {
+      height: initial;
+      height: -webkit-calc(100vh - 202px);
+      height: calc(100vh - 202px);
+      overflow-y: auto; } }
+
+/***End of Items block***/
 
 /*# sourceMappingURL=custom.css.map */
