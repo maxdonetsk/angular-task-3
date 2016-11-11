@@ -13,8 +13,13 @@
                                 });
                     }
 
+                    function getAllDummy() {
+                        return $http.get('/data/items.json');
+                    }
+
                     return  {
-                        getAll: getAll
+                        getAll: getAll,
+                        getAllDummy: getAllDummy
                     };
                 }]);
 })();

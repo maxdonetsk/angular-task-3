@@ -3362,15 +3362,15 @@ Example: @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
 
 /***End of Show items form***/
 /***Pagination***/
-.ms-pagination {
+.ms-pagination .pagination {
   margin: 0; }
-  .ms-pagination.pagination > li:first-child > a {
+  .ms-pagination .pagination > li:first-child > a {
     border-top-left-radius: 17px;
     border-bottom-left-radius: 17px; }
-  .ms-pagination.pagination > li:last-child > a {
+  .ms-pagination .pagination > li:last-child > a {
     border-top-right-radius: 17px;
     border-bottom-right-radius: 17px; }
-  .ms-pagination.pagination > li > a {
+  .ms-pagination .pagination > li > a {
     padding: 5px 12px; }
 
 /***Pagination***/

@@ -53,9 +53,9 @@ Write custom rules here ONLY!
 
 /***Pagination***/
 .ms-pagination {
-    margin: 0;
+    .pagination {
+        margin: 0;
 
-    &.pagination {
         > li {
             &:first-child {
                 > a {

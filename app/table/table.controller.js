@@ -5,13 +5,24 @@
             .module('app')
             .controller('TableController', TableController);
 
-    function TableController(Items) {
+    function TableController(Items, ItemsPerPage) {
         var vm = this;
         vm.items = [];
+        vm.itemsPerPage = ItemsPerPage.values();
+        vm.itemsPerPage.selected = vm.itemsPerPage[0];
+        vm.currentPage = 1;
 
-        Items.getAll()
-                .then(function (response) {
-                    vm.items = response.data;
+        Items.getAllDummy()
+                .then(function () {
+                    for (var i = 1; i < 501; i++) {
+                        vm.items.push({
+                            id: i,
+                            title: 'Item ' + i,
+                            width: i * 8,
+                            height: i * 4,
+                            length: i * 7
+                        });
+                    }
                 });
     }
 }());
