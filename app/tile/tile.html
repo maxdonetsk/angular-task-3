@@ -4,7 +4,12 @@
             <form id="ms-search-form">
                 <div class="form-group">
                     <div class="input-group">
-                        <input type="text" class="form-control" name="search" id="ms-search-input" placeholder="Search by all Fields">
+                        <input type="text"
+                               class="form-control"
+                               name="search"
+                               id="ms-search-input"
+                               placeholder="Search by all Fields"
+                               ng-model="vm.search">
                         <button type="submit" class="btn btn-primary" id="ms-search-submit">Search</button>
                     </div>
                 </div>
@@ -31,7 +36,7 @@
     <div class="row ms-items-block">
         <div class="col-xs-12">
             <div class="clearfix">
-                <div dir-paginate="item in vm.items | itemsPerPage: vm.itemsPerPage.selected.value" current-page="vm.currentPage"
+                <div dir-paginate="item in vm.items | filter: vm.search | itemsPerPage: vm.itemsPerPage.selected.value" current-page="vm.currentPage"
                      class="ms-item-col text-center">
                     <div class="thumbnail">
                         <a href="#">
