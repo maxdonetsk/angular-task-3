@@ -3338,8 +3338,11 @@ Example: @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
   #ms-search-form #ms-search-input {
     border-top-left-radius: 17px;
     border-bottom-left-radius: 17px;
-    width: auto;
+    width: 150px;
     height: auto; }
+    @media (min-width: 480px) {
+      #ms-search-form #ms-search-input {
+        width: auto; } }
   #ms-search-form #ms-search-submit {
     border-top-right-radius: 17px;
     border-bottom-right-radius: 17px;

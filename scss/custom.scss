@@ -16,8 +16,12 @@ Write custom rules here ONLY!
     #ms-search-input {
         border-top-left-radius: $input-height-base / 2;
         border-bottom-left-radius: $input-height-base / 2;
-        width: auto;
+        width: 150px;
         height: auto;
+
+        @media (min-width: $screen-xs) {
+            width: auto;
+        }
     }
 
     #ms-search-submit {
