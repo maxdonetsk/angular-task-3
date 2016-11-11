@@ -1,6 +1,6 @@
 <div ng-controller="TileController as vm">
     <div class="row">
-        <div class="col-md-5 text-xs-center text-md-left">
+        <div class="col-md-4 text-xs-center text-md-left">
             <form id="ms-search-form">
                 <div class="form-group">
                     <div class="input-group">
@@ -14,34 +14,19 @@
             <form class="form-horizontal" id="ms-show-items-form">
                 <div class="form-group">
                     <label class="control-label">Items per page:</label>
-                    <select class="form-control" id="ms-show-items-select">
-                        <option value="10">10</option>
-                        <option value="25">20</option>
-                        <option value="50">50</option>
-                        <option value="all">all</option>
-                    </select>
+                    <select class="form-control" id="ms-show-items-select" ng-model="vm.itemsPerPage.selected" ng-options="option as option.label for option in vm.itemsPerPage"></select>
                 </div>
             </form>
         </div>
-        <div class="col-md-4 text-xs-center text-md-right">
-            <nav>
-                <ul class="pagination ms-pagination">
-                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-                </ul>
-            </nav>
+        <div class="col-md-5 text-xs-center text-md-right">
+            <dir-pagination-controls class="ms-pagination" on-page-change="vm.pageChanged(newPageNumber)" max-size="5"  boundary-links="true"></dir-pagination-controls>
         </div>
     </div>
     <div class="row ms-items-block">
         <div class="col-xs-12">
             <div class="clearfix">
-                <div ng-repeat="item in vm.items"
-                    class="ms-item-col text-center">
+                <div dir-paginate="item in vm.items | itemsPerPage: vm.itemsPerPage.selected.value" current-page="vm.currentPage"
+                     class="ms-item-col text-center">
                     <div class="thumbnail">
                         <a href="#">
                             <img src="/img/noimage.jpg" alt="">
@@ -65,17 +50,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12 text-xs-center text-md-right">
-            <nav>
-                <ul class="pagination ms-pagination">
-                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-                </ul>
-            </nav>
+            <dir-pagination-controls class="ms-pagination" on-page-change="vm.pageChanged(newPageNumber)" max-size="5"  boundary-links="true"></dir-pagination-controls>
         </div>
     </div>
 </div>
