@@ -14,12 +14,18 @@
             <form class="form-horizontal" id="ms-show-items-form">
                 <div class="form-group">
                     <label class="control-label">Items per page:</label>
-                    <select class="form-control" id="ms-show-items-select" ng-model="vm.itemsPerPage.selected" ng-options="option as option.label for option in vm.itemsPerPage"></select>
+                    <select class="form-control"
+                            id="ms-show-items-select"
+                            ng-model="vm.itemsPerPage.selected"
+                            ng-options="option as option.label for option in vm.itemsPerPage"></select>
                 </div>
             </form>
         </div>
         <div class="col-md-5 text-xs-center text-md-right">
-            <dir-pagination-controls class="ms-pagination" on-page-change="vm.pageChanged(newPageNumber)" max-size="5"  boundary-links="true"></dir-pagination-controls>
+            <dir-pagination-controls class="ms-pagination"
+                                     on-page-change="vm.pageChanged(newPageNumber)"
+                                     max-size="5"
+                                     boundary-links="true"></dir-pagination-controls>
         </div>
     </div>
     <div class="row ms-items-block">
@@ -50,7 +56,10 @@
     </div>
     <div class="row">
         <div class="col-xs-12 text-xs-center text-md-right">
-            <dir-pagination-controls class="ms-pagination" on-page-change="vm.pageChanged(newPageNumber)" max-size="5"  boundary-links="true"></dir-pagination-controls>
+            <dir-pagination-controls class="ms-pagination"
+                                     on-page-change="vm.pageChanged(newPageNumber)"
+                                     max-size="5"
+                                     boundary-links="true"></dir-pagination-controls>
         </div>
     </div>
 </div>
