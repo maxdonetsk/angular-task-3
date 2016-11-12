@@ -60,20 +60,24 @@
                                 <div class="ms-drop-box text-center"
                                      ngf-select=""
                                      ngf-drop=""
-                                     ng-model="file">
-                                    <span ng-hide="file.name">Click or Drop</span>
-                                    <img ngf-src="file">
+                                     ng-model="vm.item.image"
+                                     required>
+                                    <span ng-hide="vm.item.image.name">Click or Drop</span>
+                                    <img ngf-src="vm.item.image">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12 text-right">
-                                <button type="submit" class="btn btn-success">Save changes</button>
+                                <button type="submit"
+                                        class="btn btn-success"
+                                        ng-disabled="vm.isDisabled || itemForm.$invalid">Save changes</button>
                                 <button type="button"
                                         class="btn btn-default"
                                         ng-click="vm.onReset()"
-                                        ng-disabled="vm.isResetDisabled">Reset changes</button>
-                                <button type="button" class="btn btn-default">Cancel</button>
+                                        ng-disabled="vm.isDisabled">Reset changes</button>
+                                <button type="button"
+                                        class="btn btn-default">Cancel</button>
                             </div>
                         </div>
                     </form>

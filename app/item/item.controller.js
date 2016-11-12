@@ -30,12 +30,12 @@
                 vm.item = {};
             }
             watchForChanges();
-            vm.isResetDisabled = true;
+            vm.isDisabled = true;
         }
 
         function watchForChanges() {
             $scope.$watchCollection('vm.item', function (newValues, oldValues) {
-                vm.isResetDisabled = (newValues === oldValues) ? true : false;
+                vm.isDisabled = (newValues === oldValues) ? true : false;
             });
         }
     }
