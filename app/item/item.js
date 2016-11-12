@@ -5,10 +5,10 @@
             .module('app')
             .config(['$stateProvider', function ($stateProvider) {
                     $stateProvider
-                            .state('create', {
-                                url: '/create',
+                            .state('item', {
+                                url: '/item/:id',
                                 views: {
-                                    content: {templateUrl: 'app/create/create.html'}
+                                    content: {templateUrl: 'app/item/item.html'}
                                 }
                             });
                 }]);

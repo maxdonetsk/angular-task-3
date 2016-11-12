@@ -3364,6 +3364,11 @@ Example: @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
 /***Pagination***/
 .ms-pagination .pagination {
   margin: 0; }
+  .ms-pagination .pagination > li[ng-if="directionLinks"] {
+    display: none; }
+    @media (min-width: 480px) {
+      .ms-pagination .pagination > li[ng-if="directionLinks"] {
+        display: inline; } }
   .ms-pagination .pagination > li:first-child > a {
     border-top-left-radius: 17px;
     border-bottom-left-radius: 17px; }
@@ -3402,8 +3407,18 @@ Example: @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
       .ms-items-block .ms-item-col {
         width: 20%; } }
     .ms-items-block .ms-item-col img {
-      width: 200px; }
+      width: 200px;
+      cursor: pointer; }
+    .ms-items-block .ms-item-col span {
+      cursor: pointer; }
+      .ms-items-block .ms-item-col span:hover {
+        text-decoration: underline; }
 
 /***End of Items block***/
+/***Items table***/
+#ms-table tr:hover {
+  cursor: pointer; }
+
+/***End of Items table***/
 
 /*# sourceMappingURL=style.css.map */

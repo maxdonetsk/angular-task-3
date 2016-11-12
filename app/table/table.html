@@ -48,7 +48,8 @@
                     </thead>
                     <tbody>
                         <tr dir-paginate="item in vm.items | filter: vm.search | itemsPerPage: vm.itemsPerPage.selected.value"
-                            current-page="vm.currentPage">
+                            current-page="vm.currentPage"
+                            ng-click="vm.goItem(item.id)">
                             <th scope="row">{{item.id}}</th>
                             <td>{{item.title}}</td>
                             <td>{{item.width}}</td>

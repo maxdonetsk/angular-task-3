@@ -26,8 +26,8 @@
                         <li ng-class="{active: vm.state.includes('tile')}">
                             <a ui-sref="tile" href="#">Items tile view</a>
                         </li>
-                        <li ng-class="{active: vm.state.includes('create')}">
-                            <a ui-sref="create" href="#">Create/add item</a>
+                        <li ng-class="{active: vm.state.includes('item')}">
+                            <a ui-sref="item" href="#">Create/edit item</a>
                         </li>
                     </ul>
                 </div>
@@ -46,13 +46,13 @@
 
         <!-- Modules -->
         <script src="app/app.js"></script>
-        <script src="app/create/create.js"></script>
+        <script src="app/item/item.js"></script>
         <script src="app/table/table.js"></script>
         <script src="app/tile/tile.js"></script>
 
         <!-- Controllers -->
         <script src="app/header/header.controller.js"></script>
-        <script src="app/create/create.controller.js"></script>
+        <script src="app/item/item.controller.js"></script>
         <script src="app/table/table.controller.js"></script>
         <script src="app/tile/tile.controller.js"></script>
 

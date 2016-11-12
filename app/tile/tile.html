@@ -38,20 +38,19 @@
             <div class="clearfix">
                 <div dir-paginate="item in vm.items | filter: vm.search | itemsPerPage: vm.itemsPerPage.selected.value" current-page="vm.currentPage"
                      class="ms-item-col text-center">
-                    <div class="thumbnail">
-                        <a href="#">
-                            <img src="/img/noimage.jpg" alt="">
-                        </a>
+                    <div class="thumbnail"
+                         ng-click="vm.goItem(item.id)">
+                        <img src="/img/noimage.jpg" alt="">
                         <div class="caption">
-                            <h3><a href="#">{{item.title}}</a></h3>
+                            <h3><span class="text-primary">{{item.title}}</span></h3>
                             <p>
-                                <a href="#">{{item.width}}</a>
+                                <span class="text-primary">{{item.width}}</span>
                             </p>
                             <p>
-                                <a href="#">{{item.height}}</a>
+                                <span class="text-primary">{{item.height}}</span>
                             </p>
                             <p>
-                                <a href="#">{{item.length}}</a>
+                                <span class="text-primary">{{item.length}}</span>
                             </p>
                         </div>
                     </div>

@@ -57,6 +57,14 @@ Write custom rules here ONLY!
         margin: 0;
 
         > li {
+            &[ng-if="directionLinks"] {
+                display: none;
+
+                @media (min-width: $screen-xs) {
+                    display: inline;
+                }
+            }
+
             &:first-child {
                 > a {
                     border-top-left-radius: $input-height-base / 2;
@@ -111,7 +119,26 @@ Write custom rules here ONLY!
 
         img {
             width: 200px;
+            cursor: pointer;
+        }
+
+        span {
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
 /***End of Items block***/
+
+
+
+/***Items table***/
+#ms-table {
+    tr:hover {
+        cursor: pointer;
+    }
+}
+/***End of Items table***/
