@@ -3420,5 +3420,21 @@ Example: @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
   cursor: pointer; }
 
 /***End of Items table***/
+/***Item form***/
+.ms-drop-box {
+  border: 5px dashed #ccc;
+  max-width: 300px;
+  max-height: 300px;
+  background-color: whitesmoke; }
+  .ms-drop-box span {
+    color: #b3b3b3;
+    display: inline-block;
+    padding: 50px 10px;
+    font-weight: 700; }
+  .ms-drop-box img {
+    max-width: 290px;
+    max-height: 290px; }
+
+/***End of Item form***/
 
 /*# sourceMappingURL=style.css.map */

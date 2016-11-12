@@ -142,3 +142,26 @@ Write custom rules here ONLY!
     }
 }
 /***End of Items table***/
+
+
+
+/***Item form***/
+.ms-drop-box {
+    border: $dropbox-border-width dashed $input-border;
+    max-width: $dropbox-size;
+    max-height: $dropbox-size;
+    background-color: lighten($input-border, 16);
+
+    span {
+        color: darken($input-border, 10);
+        display: inline-block;
+        padding: 50px 10px;
+        font-weight: 700;
+    }
+
+    img {
+        max-width: $dropbox-size - $dropbox-border-width * 2;
+        max-height: $dropbox-size - $dropbox-border-width * 2;
+    }
+}
+/***End of Item form***/
