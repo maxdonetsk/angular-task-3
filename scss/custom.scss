@@ -176,3 +176,18 @@ Write custom rules here ONLY!
     }
 }
 /***End of Item form***/
+
+
+
+/***Modal***/
+.modal {
+    &.ms-modal-danger {
+        .modal-header {
+            background: $brand-danger;
+            border-top-left-radius: $border-radius-large - 2;
+            border-top-right-radius: $border-radius-large - 2;
+            color: #FFF;
+        }
+    }
+}
+/***End of Modal***/
