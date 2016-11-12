@@ -164,4 +164,15 @@ Write custom rules here ONLY!
         max-height: $dropbox-size - $dropbox-border-width * 2;
     }
 }
+
+.has-error {
+    .ms-drop-box {
+        border-color: darken($brand-danger, 5);
+        background-color: lighten($brand-danger, 35);
+
+        span {
+            color: $brand-danger;
+        }
+    }
+}
 /***End of Item form***/

@@ -2,7 +2,12 @@
     'use strict';
 
     angular
-            .module('app', ['ui.bootstrap', 'ui.router', 'angularUtils.directives.dirPagination', 'ngFileUpload'])
+            .module('app', [
+                'ui.bootstrap',
+                'ui.router',
+                'angularUtils.directives.dirPagination',
+                'ngFileUpload',
+                'ui.bootstrap.showErrors'])
             .config(['$urlRouterProvider', function ($urlRouterProvider) {
                     $urlRouterProvider.otherwise('table');
                 }])

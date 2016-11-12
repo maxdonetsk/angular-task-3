@@ -7,61 +7,82 @@
                     <hr />
                     <form class="form-horizontal"
                           name="itemForm">
-                        <div class="form-group"
+                        <div class="form-group text-muted"
                              ng-if="vm.item.id">
                             <label class="col-sm-2 control-label">ID</label>
                             <div class="col-sm-10">
                                 <p class="form-control-static">{{vm.item.id}}</p>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="ms-title" class="col-sm-2 control-label">Title</label>
+                        <div class="form-group" show-errors>
+                            <label for="ms-title" class="col-sm-2 control-label">Title*</label>
                             <div class="col-sm-10">
                                 <input type="text"
                                        class="form-control"
-                                       id="ms-title"
+                                       id="title"
+                                       name="title"
                                        required
                                        ng-model="vm.item.title" />
+                                <span class="help-block"
+                                      ng-show="itemForm.title.$error.required && itemForm.title.$touched">Füllen Sie bitte dieses Feld aus.</span>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="ms-title" class="col-sm-2 control-label">Width</label>
+                        <div class="form-group" show-errors>
+                            <label for="ms-title" class="col-sm-2 control-label">Width*</label>
                             <div class="col-sm-10">
                                 <input type="number"
                                        class="form-control"
-                                       id="ms-title"
+                                       id="width"
+                                       name="width"
                                        required
-                                       ng-model="vm.item.width" />
+                                       ng-model="vm.item.width"
+                                       valid-number />
+                                <span class="help-block" ng-show="itemForm.width.$error.required && itemForm.width.$touched">Füllen Sie bitte dieses Feld aus.</span>
+                                <span class="help-block" ng-show="itemForm.width.$error.number && itemForm.width.$touched">Nur Zahlen eingeben.</span>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="ms-title" class="col-sm-2 control-label">Height</label>
+                        <div class="form-group" show-errors>
+                            <label for="ms-title" class="col-sm-2 control-label">Height*</label>
                             <div class="col-sm-10">
                                 <input type="number"
                                        class="form-control"
-                                       id="ms-title"
+                                       id="height"
+                                       name="height"
                                        required
-                                       ng-model="vm.item.height" />
+                                       ng-model="vm.item.height"
+                                       valid-number />
+                                <span class="help-block" ng-show="itemForm.height.$error.required && itemForm.height.$touched">Füllen Sie bitte dieses Feld aus.</span>
+                                <span class="help-block" ng-show="itemForm.height.$error.number && itemForm.height.$touched">Nur Zahlen eingeben.</span>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="ms-title" class="col-sm-2 control-label">Length</label>
+                        <div class="form-group" show-errors>
+                            <label for="ms-title" class="col-sm-2 control-label">Length*</label>
                             <div class="col-sm-10">
                                 <input type="number"
                                        class="form-control"
-                                       id="ms-title"
+                                       id="length"
+                                       name="length"
                                        required
-                                       ng-model="vm.item.length" />
+                                       ng-model="vm.item.length"
+                                       valid-number />
+                                <span class="help-block" ng-show="itemForm.length.$error.required && itemForm.length.$touched">Füllen Sie bitte dieses Feld aus.</span>
+                                <span class="help-block" ng-show="itemForm.length.$error.number && itemForm.length.$touched">Nur Zahlen eingeben.</span>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="ms-title" class="col-sm-2 control-label">Image</label>
+                        <div class="form-group"
+                             ng-class="{'has-error': (itemForm.image.$error.required && itemForm.image.$touched)}">
+                            <label for="ms-title" class="col-sm-2 control-label">Image*</label>
                             <div class="col-sm-10">
                                 <div class="ms-drop-box text-center"
                                      ngf-select=""
                                      ngf-drop=""
+                                     ngf-pattern="'image/*'"
+                                     ngf-accept="'image/*'"
                                      ng-model="vm.item.image"
-                                     required>
+                                     id="image"
+                                     name="image"
+                                     ng-required="true"
+                                     ng-click="itemForm.image.$setTouched()">
                                     <span ng-hide="vm.item.image.name">Click or Drop</span>
                                     <img ngf-src="vm.item.image">
                                 </div>
