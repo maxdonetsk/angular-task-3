@@ -57,7 +57,7 @@
 
         function onReset() {
             if (!!$stateParams.id && !!items) {
-                vm.item = angular.copy(items[$stateParams.id - 1]);
+                vm.item = angular.copy(itemById);
             } else {
                 vm.item = {};
             }
