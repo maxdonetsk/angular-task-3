@@ -51,19 +51,19 @@
                         }
                     });
                     items[index] = {
-                        id: vm.item.id,
+                        id: parseInt(vm.item.id),
                         title: vm.item.title,
-                        width: vm.item.width,
-                        height: vm.item.height,
-                        length: vm.item.length
+                        width: parseInt(vm.item.width),
+                        height: parseInt(vm.item.height),
+                        length: parseInt(vm.item.length)
                     };
                 } else {
                     items.push({
                         id: parseInt(_.last(items).id) + 1,
                         title: vm.item.title,
-                        width: vm.item.width,
-                        height: vm.item.height,
-                        length: vm.item.length
+                        width: parseInt(vm.item.width),
+                        height: parseInt(vm.item.height),
+                        length: parseInt(vm.item.length)
                     });
                 }
                 localStorageService.set('items', items);
