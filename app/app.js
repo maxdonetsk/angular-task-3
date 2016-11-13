@@ -7,7 +7,8 @@
                 'ui.router',
                 'angularUtils.directives.dirPagination',
                 'ngFileUpload',
-                'ui.bootstrap.showErrors'])
+                'ui.bootstrap.showErrors',
+                'LocalStorageModule'])
             .config(['$urlRouterProvider', function ($urlRouterProvider) {
                     $urlRouterProvider.otherwise('table');
                 }])

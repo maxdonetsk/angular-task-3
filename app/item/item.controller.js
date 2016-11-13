@@ -5,9 +5,10 @@
             .module('app')
             .controller('ItemController', ItemController);
 
-    function ItemController($scope, $state, $stateParams, $uibModal, Items) {
+    function ItemController($scope, $state, $stateParams, $uibModal, Items, localStorageService) {
         var vm = this;
         var items = [];
+        var itemById = {};
 
         vm.header = '';
         vm.item = {};
@@ -17,8 +18,15 @@
         vm.onCancel = onCancel;
 
         if (!!$stateParams.id) {
-            items = Items.getAllDummy();
-            vm.item = angular.copy(items[$stateParams.id - 1]);
+            if (localStorageService.isSupported && !!localStorageService.get('items')) {
+                items = localStorageService.get('items');
+            } else {
+                items = Items.getAllDummy();
+            }
+
+            itemById = _.find(items, {id: parseInt($stateParams.id)});
+
+            vm.item = angular.copy(itemById);
             vm.header = 'Edit item';
         } else {
             vm.header = 'Create a new item';
@@ -35,6 +43,8 @@
                 size: 'sm'
             });
             vm.deleteModal.result.then(function () {
+                _.pullAllBy(items, [{id: parseInt(vm.item.id)}], 'id');
+                localStorageService.set('items', items);
                 goDefaultState();
             });
         }
